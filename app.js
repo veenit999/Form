@@ -164,12 +164,12 @@ app.post("/uploadfile", upload.single("pic"), function (req,res) {
 
 
 
-app.listen(PORT,function(err){
+app.listen(process.env.PORT,function(err){
     if(err){
         console.log("Server error...",err);
     }
     else{
-        console.log(`Server started at ${PORT}`);
+        console.log(`Server started at ${process.env.PORT}`);
     }
 
 })
